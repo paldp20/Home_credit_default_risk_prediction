@@ -28,7 +28,7 @@ st.markdown(
         font-size: 16px;
     }
     .stButton>button:hover {
-        background-color: #4CA5AF;
+        background-color: #065159;
     }
     .stHeader {
         color: #4CA5AF;
@@ -62,6 +62,16 @@ st.markdown(
     .stSidebar .stMarkdown {
         color: white;
     }
+    .stSidebar .stButton {
+        background-color: #4CA5AF;
+        color: white;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    .stSidebar .stButton>button:hover {
+        background-color: #065159;
+    }
     .stSidebar .stNumberInput>div>div>input {
         background-color: black;
         color: white;
@@ -91,6 +101,18 @@ st.markdown(
     """
     <div class="main">
         <h1 style="color: #4CA5AF; text-align: center;">🏦 Home Credit Default Risk Prediction</h1>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+st.markdown(
+    """
+    <div>
+        <h3></h3>
+        <h2 style="color: #4CA5AF;">Welcome!</h2>
+        <h3>To veiw your prediction analysis please fill the details on the left!</h3>
+        <h4> __________________________________________________________________</h4>
     </div>
     """,
     unsafe_allow_html=True,
@@ -137,6 +159,14 @@ def preprocess(df):
 
 # Predict button
 if st.sidebar.button("🔍 Predict"):
+    st.markdown(f"""
+    <div>
+        <h2 style="color: white; text-align: centre">Prediction Analysis:</h2>
+    </div>
+    """,
+    unsafe_allow_html=True,
+    )
+
     processed_df = preprocess(input_df)
     proba = model.predict_proba(processed_df)[0][1]
 
@@ -154,7 +184,7 @@ if st.sidebar.button("🔍 Predict"):
     with col1:
         st.markdown(
             f"""
-            <div style="text-align: center;">
+            <div>
                 <h2 style="color: {color};">{status}</h2>
                 <h3>Probability: {proba:.2%}</h3>
             </div>
