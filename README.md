@@ -13,10 +13,12 @@ This project aims to predict the likelihood of a client defaulting on a loan usi
    - Encoding categorical features
    - Feature engineering (creating meaningful derived features and aggregation)
    - Data scaling and normalization
+     
 2. **Exploratory Data Analysis (EDA)**:
    - Understanding data distributions
    - Identifying key predictors using correlation analysis
    - Visualizing class imbalance
+     
 3. **Model Training & Evaluation**:
    - Using models like Logistic Regression, Decision Trees, Random Forest, and LightGBM
    - Handling class imbalance using different techniques
@@ -53,5 +55,6 @@ Below are the evaluation results of the best-performing model:
 Generative AI tools were utilized in the following areas:
 - Feature engineering and data augmentation strategies
 - Hyperparameter tuning recommendations
+- Streamlining code
 - Documentation and report generation (Function docstrings, comments)
 
