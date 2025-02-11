@@ -34,12 +34,6 @@ Below are the evaluation results of the best-performing model:
 ### Important Features
 ![Important Features](Feature_importance.jpg)
 
-## Generative AI Tools Usage
-Generative AI tools were utilized in the following areas:
-- Feature engineering and data augmentation strategies
-- Hyperparameter tuning recommendations
-- Documentation and report generation (Function docstrings, comments)
-
 ## How to Run
 1. Clone the repository:
    ```python
@@ -54,4 +48,10 @@ Generative AI tools were utilized in the following areas:
    ```python
    streamlit run app.py
    ```
+
+## Generative AI Tools Usage
+Generative AI tools were utilized in the following areas:
+- Feature engineering and data augmentation strategies
+- Hyperparameter tuning recommendations
+- Documentation and report generation (Function docstrings, comments)
 
