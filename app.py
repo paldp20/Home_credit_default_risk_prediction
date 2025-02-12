@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 import plotly.graph_objects as go
-#from fpdf import FPDF
+from fpdf import FPDF
 
 st.set_page_config(page_title="Credit Default Risk", layout="wide")
 
@@ -129,7 +129,7 @@ st.sidebar.markdown(
 )
 
 input_data = {}
-
+selected_features = list(set(selected_features))
 for feature in selected_features:
     if feature in cat_features:
         options = feature_values.get(feature, [])
